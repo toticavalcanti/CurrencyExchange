@@ -1,0 +1,137 @@
+Started GET "/" for 172.18.0.1 at 2018-06-14 16:44:27 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ExchangesController#index as HTML
+  Rendering exchanges/index.html.erb within layouts/application
+  Rendered exchanges/_exchange_box.html.erb (2.0ms)
+  Rendered exchanges/index.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 221ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap/dist/css/bootstrap.
+Load paths:
+  /onebitexchange/app/assets/config
+  /onebitexchange/app/assets/images
+  /onebitexchange/app/assets/javascripts
+  /onebitexchange/app/assets/stylesheets
+  /gems/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /gems/gems/actioncable-5.2.0/lib/assets/compiled
+  /gems/gems/activestorage-5.2.0/app/assets/javascripts
+  /gems/gems/actionview-5.2.0/lib/assets/compiled
+  /gems/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /onebitexchange/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:     <%= favicon_link_tag '/favicon.png' %>
+    11:     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+app/assets/stylesheets/application.scss:1
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___4056802579180837796_47215563900800'
+Started GET "/" for 172.18.0.1 at 2018-06-14 16:46:12 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ExchangesController#index as HTML
+  Rendering exchanges/index.html.erb within layouts/application
+  Rendered exchanges/_exchange_box.html.erb (1.6ms)
+  Rendered exchanges/index.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 229ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap/dist/css/bootstrap.
+Load paths:
+  /onebitexchange/app/assets/config
+  /onebitexchange/app/assets/images
+  /onebitexchange/app/assets/javascripts
+  /onebitexchange/app/assets/stylesheets
+  /gems/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /gems/gems/actioncable-5.2.0/lib/assets/compiled
+  /gems/gems/activestorage-5.2.0/app/assets/javascripts
+  /gems/gems/actionview-5.2.0/lib/assets/compiled
+  /gems/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /onebitexchange/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:     <%= favicon_link_tag '/favicon.png' %>
+    11:     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+app/assets/stylesheets/application.scss:1
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___4410221544370404650_70117493751620'
+Started GET "/" for 172.18.0.1 at 2018-06-14 16:55:07 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ExchangesController#index as HTML
+  Rendering exchanges/index.html.erb within layouts/application
+  Rendered exchanges/_exchange_box.html.erb (4.5ms)
+  Rendered exchanges/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 365ms (Views: 354.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/convert?source_currency=BRL&target_currency=EUR&amount=23" for 172.18.0.1 at 2018-06-14 16:55:12 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ExchangesController#convert as JSON
+  Parameters: {"source_currency"=>"BRL", "target_currency"=>"EUR", "amount"=>"23"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/services/exchange_service.rb:14:in `perform'
+app/controllers/exchanges_controller.rb:6:in `convert'
+Started GET "/convert?source_currency=BRL&target_currency=EUR&amount=45" for 172.18.0.1 at 2018-06-14 16:55:18 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ExchangesController#convert as JSON
+  Parameters: {"source_currency"=>"BRL", "target_currency"=>"EUR", "amount"=>"45"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/services/exchange_service.rb:14:in `perform'
+app/controllers/exchanges_controller.rb:6:in `convert'
+Started GET "/convert?source_currency=BRL&target_currency=EUR&amount=45" for 172.18.0.1 at 2018-06-14 16:55:31 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ExchangesController#convert as JSON
+  Parameters: {"source_currency"=>"BRL", "target_currency"=>"EUR", "amount"=>"45"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/services/exchange_service.rb:14:in `perform'
+app/controllers/exchanges_controller.rb:6:in `convert'
+Started GET "/convert?source_currency=BRL&target_currency=EUR&amount=45" for 172.18.0.1 at 2018-06-14 17:05:53 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ExchangesController#convert as JSON
+  Parameters: {"source_currency"=>"BRL", "target_currency"=>"EUR", "amount"=>"45"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/services/exchange_service.rb:14:in `perform'
+app/controllers/exchanges_controller.rb:6:in `convert'
+Started GET "/" for 172.18.0.1 at 2018-06-14 17:22:55 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ExchangesController#index as HTML
+  Rendering exchanges/index.html.erb within layouts/application
+  Rendered exchanges/_exchange_box.html.erb (1.7ms)
+  Rendered exchanges/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 265ms (Views: 253.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/convert?source_currency=BRL&target_currency=EUR&amount=45" for 172.18.0.1 at 2018-06-14 17:22:57 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ExchangesController#convert as JSON
+  Parameters: {"source_currency"=>"BRL", "target_currency"=>"EUR", "amount"=>"45"}
+Completed 200 OK in 854ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
