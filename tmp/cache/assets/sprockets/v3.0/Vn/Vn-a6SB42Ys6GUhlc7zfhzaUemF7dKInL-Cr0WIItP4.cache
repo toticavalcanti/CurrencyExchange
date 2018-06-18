@@ -1,0 +1,31 @@
+I"](function() {
+  $(document).ready(function() {
+    $('#SwapBtn').click(function() {
+      var source, target;
+      source = $('#source_currency').val();
+      target = $('#target_currency').val();
+      $('#source_currency').val(target);
+      return $('#target_currency').val(source);
+    });
+    $('#amount').on("input", function() {
+      return $.ajax('/convert', {
+        type: 'GET',
+        dataType: 'json',
+        data: {
+          source_currency: $("#source_currency").val(),
+          target_currency: $("#target_currency").val(),
+          amount: $("#amount").val()
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+          return alert(textStatus);
+        },
+        success: function(data, text, jqXHR) {
+          return $('#result').val(data.value);
+        }
+      });
+    });
+    return false;
+  });
+
+}).call(this);
+:ET
