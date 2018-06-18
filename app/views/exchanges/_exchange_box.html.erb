@@ -14,7 +14,7 @@
           </div>
 
           <div class='form-group'>
-            <input type='number' name='amount' id='amount' class='form-control' placeholder='Quantidade ($10)' step='any' required onsubmit="submete()">
+            <input type='number' name='amount' id='amount' class='form-control' placeholder='Quantidade ($10)' step='any' required>
           </div>
         </div>
                     
@@ -26,8 +26,12 @@
           <div class='form-group'>
             <input type='text' id='result' name='result' class='form-control' placeholder='Resultado' readonly>
           </div>
+          <div>
+            <button type="button" class='select-swap col-md-12' id="SwapBtn" onclick="swap_selects();">INVERTER CAMPOS</button>
+          </div>
+
         </div>
       <% end %>
-    </div>
-  </div>
-</div>
+    </div><!-- cards -->
+  </div><!-- cards -->
+</div><!-- exchange_box  -->

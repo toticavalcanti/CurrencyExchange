@@ -1,0 +1,43 @@
+I"’(function() {
+  $(document).ready(function() {
+    var swap_selects;
+    $('#amount').on("input", function() {
+      return $.ajax('/convert', {
+        type: 'GET',
+        dataType: 'json',
+        data: {
+          source_currency: $("#source_currency").val(),
+          target_currency: $("#target_currency").val(),
+          amount: $("#amount").val()
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+          return alert(textStatus);
+        },
+        success: function(data, text, jqXHR) {
+          return $('#result').val(data.value);
+        }
+      });
+    });
+    return false;
+    return swap_selects = function() {
+      $.ajax('/convert', {
+        type: 'GET',
+        dataType: 'json',
+        data: {
+          source_currency: $("#target_currency").val(),
+          target_currency: $("#source_currency").val(),
+          amount: $("#amount").val()
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+          return alert(textStatus);
+        },
+        success: function(data, text, jqXHR) {
+          return $('#result').val(data.value);
+        }
+      });
+      return false;
+    };
+  });
+
+}).call(this);
+:ET
