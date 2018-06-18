@@ -3,6 +3,13 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 #
 $(document).ready ->
+  $('#SwapBtn').click -> 
+    source = $('#source_currency').val()
+    target = $('#target_currency').val()
+
+    $('#source_currency').val(target)
+    $('#target_currency').val(source)
+    $('form').submit()
 
   $('#amount').on "input", ->
     $.ajax '/convert',
@@ -18,3 +25,4 @@ $(document).ready ->
       success: (data, text, jqXHR) ->
         $('#result').val(data.value)
   return false;
+

@@ -1,0 +1,33 @@
+I" (function() {
+  $(document).ready(function() {
+    $('#SwapBtn').click(function() {
+      var cd_val, cur_val;
+      cur_val = $('#source_currency').val();
+      cd_val = $('#target_currency').val();
+      cur_val = $('#source_currency').val();
+      $('#currency').val(cd_val);
+      $('#target_currency').val(cur_val);
+      return $('form').submit();
+    });
+    $('#amount').on("input", function() {
+      return $.ajax('/convert', {
+        type: 'GET',
+        dataType: 'json',
+        data: {
+          source_currency: $("#source_currency").val(),
+          target_currency: $("#target_currency").val(),
+          amount: $("#amount").val()
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+          return alert(textStatus);
+        },
+        success: function(data, text, jqXHR) {
+          return $('#result').val(data.value);
+        }
+      });
+    });
+    return false;
+  });
+
+}).call(this);
+:ET
