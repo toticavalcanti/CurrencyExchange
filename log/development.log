@@ -4317,3 +4317,51 @@ Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms)
 
   [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
   ↳ /gems/bin/rspec:23
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ spec/rails_helper.rb:27
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ spec/rails_helper.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /gems/bin/rspec:23
+Started GET "/" for 127.0.0.1 at 2018-06-18 21:09:18 +0000
+Processing by ExchangesController#index as HTML
+  Rendering exchanges/index.html.erb within layouts/application
+  Rendered exchanges/_exchange_box.html.erb (1.6ms)
+  Rendered exchanges/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 327ms (Views: 318.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /gems/bin/rspec:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /gems/bin/rspec:23
+Started GET "/convert?source_currency=USD&target_currency=BRL&amount=7289" for 127.0.0.1 at 2018-06-18 21:09:19 +0000
+Processing by ExchangesController#convert as HTML
+  Parameters: {"source_currency"=>"USD", "target_currency"=>"BRL", "amount"=>"7289"}
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /gems/bin/rspec:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /gems/bin/rspec:23
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /gems/bin/rspec:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /gems/bin/rspec:23
+Started GET "/" for 127.0.0.1 at 2018-06-18 21:09:19 +0000
+Processing by ExchangesController#index as HTML
+  Rendering exchanges/index.html.erb within layouts/application
+  Rendered exchanges/_exchange_box.html.erb (1.9ms)
+  Rendered exchanges/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/convert?utf8=%E2%9C%93&source_currency=EUR&amount=5115&target_currency=USD&result=" for 127.0.0.1 at 2018-06-18 21:09:19 +0000
+Processing by ExchangesController#convert as HTML
+  Parameters: {"utf8"=>"✓", "source_currency"=>"EUR", "amount"=>"5115", "target_currency"=>"USD", "result"=>""}
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /gems/bin/rspec:23
