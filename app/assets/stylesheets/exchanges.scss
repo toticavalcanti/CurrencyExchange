@@ -2,8 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-  //background: image-url("/background-img.jpg") no-repeat center center fixed;
-  background-color: rgb(102, 177, 158);
+  background: image-url("/background-img.jpg") no-repeat center center fixed;
+  //background-color: rgb(102, 177, 158);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -24,7 +24,7 @@ body {
   }
 
   .subtitle{
-    color: rgb(110, 85, 128);
+    color: rgb(234, 221, 243);
     text-shadow: 3px 0px 3px #000000;
     font-size: 30px;
     margin-left: 10px;
